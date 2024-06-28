@@ -57,8 +57,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector(".nav-action-btn-icon")?.addEventListener("click", displayCartPopUp)
     exploreBtnLists?.map(el=> el.addEventListener("click",exploreProductFunc.bind(this)));
     updateCartBagdeNum()
-    // Call handlePageLoad on window load
-//    indexPage.addEventListener('click', handlePageLoad);
 
 });
 

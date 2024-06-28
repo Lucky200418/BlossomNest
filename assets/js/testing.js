@@ -35,6 +35,7 @@ import {
     navbar,
     overlay,
     dropdownContainerBasket,
+    basketSection,
 } from "../../assets/js/dom.js"
 
 
@@ -145,13 +146,13 @@ const loadMoreContent = function(){
 
 
 // Display Loading of content
-const displayLoader = function(){
+ function displayLoader(){
    let arr = [1,2,3,4]
     const newProductList = arr.map(el => {
                 return productLoaderHtml
         }).join(" ")
-   
 productList.insertAdjacentHTML("beforeend", newProductList) 
+
 }
 
 
@@ -179,11 +180,11 @@ function DisplayTrendProductList(DisplayArr){
 function DisplayProductList(DisplayArr){
     // logic for which array get displayed more
     loadContent = DisplayArr.length === productDataJson.length ? DisplayArr: sortedArr
-
+    
     let newArr = DisplayArr.filter((value, index) => {
         if (index  >= start && index <= end ) {return value}
     })
-   
+    
     
     let newProductList =  newArr.map(el => {
         
@@ -192,12 +193,17 @@ function DisplayProductList(DisplayArr){
     }).join(" ");
     
 
-   productList.innerHTML = newProductList
+    displayLoader()
 
-   let productItemList = [...productList.querySelectorAll(".product-item")]
-  
+    setTimeout(() => {
+            productList.innerHTML = newProductList
+            
+        let productItemList = [...productList.querySelectorAll(".product-item")]
+        
 
-    productItemList.forEach(el => el.addEventListener("click", handleProductClick.bind(this)))
+        productItemList.forEach(el => el.addEventListener("click", handleProductClick.bind(this)))
+    },2000)
+   
 }
 
 
@@ -224,7 +230,8 @@ const sortProducts = function(e){
 
     sortedArr = []
     sortedArr.push(...subCategoryList)
-  
+    
+
     DisplayProductList(sortedArr)
 }
 
@@ -340,7 +347,8 @@ function AddToCart(e){
     dropdownContainer.classList.remove("hidden")
     productCard.classList.add('hidden')
     emptycart.classList.add('hidden')
-
+    navbar.classList.toggle("active");
+    overlay.classList.toggle("active");
 
     let Item = +e.target.className.slice(-1)
 
@@ -394,7 +402,6 @@ export const DisplayCartArrayList = function(){
 }
 
 
-
 // Display/Show the cart product details page
 const showCartListDetails = function(e){
     if(e.target.className.includes("Btn") || e.target.className.includes("trash")) return
@@ -418,7 +425,7 @@ const showCartListDetails = function(e){
    document.querySelector(".mainContainer")?.classList.add("hidden")
    document.querySelector(".orderProduct").setAttribute("data-id", id)
    document.querySelector(".div-3-details-content-name").innerText = product.name
-   document.querySelector(".div-3-details-content-price").innerText = product.price
+   document.querySelector(".div-3-details-content-price").innerText = `₦${product.price}`
    document.querySelector(".div-3-details-content-descrip").innerText = product.description
    document.querySelector(".div-3-details-content-2-p").innerText = product.description
    document.querySelector(".orderProduct").addEventListener("click", handleOrderCartDetails.bind(this))
@@ -502,6 +509,7 @@ const nextImageDetailsList = function(){
 // ///// Seach By Category////////////////////////////////////
 const exploreProductFunc = function(e){
     localStorage.setItem("sort", true)
+
     let searchCategory = e.target.getAttribute("data-set")
     
     let categoryListArr = productDataJson.filter(el => el.category === searchCategory && el)
