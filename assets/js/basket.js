@@ -22,7 +22,9 @@ import {
         basketCheckoutDetailsDivDiscount,
         basketCheckoutMsgPrice,
         basketSectionCloseIcon,
-        basketCheckoutMsgBtn
+        basketCheckoutMsgBtn,
+        navbar,
+        overlay,
 } 
     from "../../assets/js/dom.js"
 
@@ -158,6 +160,11 @@ function updateListDetails(basketItemData, id){
 // Display Basket Page
 function DisplayBasketPage(e){
     if(!(e.target.tagName === "LI" || e.target.tagName === "STRONG")) return
+
+    // Close Navbar
+    navbar.classList.remove("active");
+    overlay.classList.remove("active");
+
 
     let id = +e.target.getAttribute("data-id")
     

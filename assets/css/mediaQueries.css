@@ -18,7 +18,8 @@
         height: auto ;
         width: 60%;
       }
-      .mainContainerbasket{
+
+    .mainContainerbasket{
         grid-template-columns: 1fr;
     }
 
@@ -73,4 +74,133 @@
 }
 
 
-  
+@media (max-width: 790px){
+    #productCard{
+        width: 80%;
+        height: auto;
+        padding: 0.5rem 1rem;
+    }
+
+    .topHeadingBasket h3{
+        font-size: 2.7rem;
+    }
+
+    .basketSectionCloseIcon{
+        font-size: 2rem;
+    }
+
+    .basketItemDetailsClose{
+        font-size: 2rem;
+        color: var(--salmon) !important;
+    }
+
+    .logo-h1{
+        font-size: 2rem;
+      }
+
+    .basketCheckoutContainer{
+        width: 100%;
+        padding-right: 2rem;
+    }
+
+    .basketSectionTopNav{
+        padding-left: 1rem;
+        gap: 1.8rem;
+        font-size: 1.8rem;
+    }
+
+    .basketListConatiners, .basketCheckoutContainer{
+        padding: 1rem !important;
+    }
+
+
+    .productDetails {
+        font-size: 1.2rem !important;
+    }
+
+    .productDetailsBckBtn{
+        font-size: 2rem;
+    }
+
+    .div-sub-images-container{
+        margin-left: 6rem;
+        width: 100%;
+        padding: 0rem;
+        gap: 0.6rem;
+    }
+    
+}
+
+
+
+
+@media (max-width: 500px){
+    #productCard{
+        width: 90%;
+        height: auto;
+        font-size: 1.2rem;
+    }
+
+    .basketSection{
+        font-size: 0.9rem !important;
+    }
+
+    .basketSectionTopNav{
+        font-size: 1.7rem;
+    }
+
+    .topHeadingBasket h3{
+        font-size: 2rem;
+    }
+
+    .logo{
+        font-size: 1.5rem;
+    }
+
+}
+
+
+@media (max-width: 450px){
+    .dropdownContainer{
+        width: 32rem;
+        font-size: 1rem;
+        padding: 1.2rem;
+      }
+    
+      .topHeadingBasket h3{
+        font-size: 2rem;
+    }
+
+    .topHeadingBasket span{
+        font-size: 1.6rem;
+        color: var(--salmon);
+    }
+
+}
+
+@media (max-width: 350px){
+    .dropdownContainer{
+        width: 26rem;
+        font-size: 0.8rem;
+      }
+
+      .basketSectionTopNav{
+        padding-left: 1rem;
+        gap: 1.8rem;
+        font-size: 1.3rem;
+    }
+
+    .div-sub-images-container{
+        margin-left: 5rem;
+    }
+    
+    .productDetails {
+        font-size: 0.9rem !important;
+    }
+
+    .logo{
+        font-size: 1.4rem;
+    }
+
+      
+}

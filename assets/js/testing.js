@@ -347,8 +347,8 @@ function AddToCart(e){
     dropdownContainer.classList.remove("hidden")
     productCard.classList.add('hidden')
     emptycart.classList.add('hidden')
-    navbar.classList.toggle("active");
-    overlay.classList.toggle("active");
+    navbar.classList.add("active");
+    overlay.classList.add("active");
 
     let Item = +e.target.className.slice(-1)
 
@@ -405,6 +405,11 @@ export const DisplayCartArrayList = function(){
 // Display/Show the cart product details page
 const showCartListDetails = function(e){
     if(e.target.className.includes("Btn") || e.target.className.includes("trash")) return
+
+    // close Nav Mobile
+    navbar.classList.remove("active");
+    overlay.classList.remove("active");
+
 
     let id = +e.target.getAttribute("data-id")
     let product = productDataJson.find(el => el.id === id && el)

@@ -1,8 +1,6 @@
 .basketSection{
     height: 70vh;
-    font-size: 1.5rem;
-}
-.basketSection {
+    /* font-size: 1.5rem; */
     position: relative; /* Make sure the section is positioned */
 }
 
@@ -46,8 +44,8 @@
 
 .basketListConatiners, .basketCheckoutContainer{
     padding-left: 8rem;
-    width: 100%;
-    
+    width: 100%; 
+   
 }
 
 .topHeadingBasket{
@@ -65,7 +63,6 @@
     color: var(--salmon);
 }
 .viewMoreBasketListsCont{
-    
     margin-top: 2rem;
     margin-bottom: 2rem;
     font-size: 2rem;
@@ -74,9 +71,7 @@
     display: flex;
     color: var(--bittersweet);
 }
-.basketList{
-    
-}
+
 .basketList li{
     display: flex;
     align-items: start;
