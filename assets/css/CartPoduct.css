@@ -1,0 +1,159 @@
+
+body {
+    scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+
+  .productDetails {
+    font-size: 2rem !important;
+    /* display: grid;
+    grid-template-columns: 0.4fr 1fr 1fr; */
+    display: flex;
+    gap: 0.6rem;
+    position: relative; /* Keep it in normal flow */
+    width: 100%;
+    height: auto;
+    background-color: #fff; /* Adjust background color as needed */
+    animation: slideInFromBottom 0.5s ease-in-out; /* Define animation */
+    margin-top: 1rem; /* Adjust this value based on your navbar's height */
+}
+
+.div-1-details{
+  height: 100vh;
+  width: 33%;
+}
+.div-2-details{
+    width: 25%;
+}
+.div-3-details{
+    width: 90%;
+}
+.div-1-detailsContainer{
+    height: 100%;
+}
+.div-sub-images-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.2rem;
+    padding: 1rem;
+    height: 67%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.div-icon-container{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 4.2rem;
+    margin-top: 1.4rem;
+}
+
+.div-1-details-backIcon{
+    width: 3rem;
+    font-size: 1.5rem;
+    background-color: #e3e1e1;
+    padding: 0.7rem;
+    width: 20%;
+    border-radius: 6px;
+}
+
+.div-1-img{
+    width: 46%;
+    height: 25%;
+}
+.activeBlock{
+    border: 6px solid rgb(213, 210, 210) !important ;
+    border-radius: 11px;
+}
+
+.cart-div-img{
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+}
+
+.div-2-details{
+  width: 100%;
+  object-fit: cover;
+}
+.productDisplayImage{
+    width: 100%;
+    height: 80%;
+}
+
+.div-3-details{
+padding: 2rem 2.8rem;
+}
+.div-3-details-content{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+.div-3-details-content-colors{
+    display: flex;
+    gap: 1.6rem;
+    margin-bottom: 3rem;
+}
+.div-3-details-content-colors div{
+    width:11%;
+    height: 5rem;
+    background-color: yellow;
+}
+.div-3-details-btn-container{
+    display: flex;
+    gap: 3rem;
+}
+.div-3-details-btn-container  button{
+background-color: rgb(52, 50, 50);
+color: #fff;
+padding: 1.3rem;
+width: 75%;
+border-radius: 5px;
+}
+.div-3-details-btn-container  select{
+    padding: 0.1rem 1.6rem;
+    border: 1px solid rgb(112, 111, 111);
+    border-radius: 7px;
+}
+
+.div-3-details-content-2 h3{
+border-top: 2px solid rgb(41, 39, 39);
+padding-top: 2rem;
+margin-bottom: 4rem;
+}
+
+.div-3-details-content-2 p{
+    line-height: 2.5rem;
+}
+
+.productDetailsBckBtn{
+    position: absolute;
+    top: 0;
+    left: 9px;
+    font-size: 4rem;
+    color: var(--salmon);
+    z-index: 40;
+}
+
+
+/* Hide scroll bar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* Optional: just to ensure there's no visible background */
+}
+
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(100%); /* Start position */
+    }
+    to {
+        transform: translateY(0); /* End position */
+    }
+}

@@ -1,0 +1,26 @@
+#about-me{
+    padding: var(--section-padding);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 1% 5%;
+}
+
+#about-me div{
+    margin: 20% 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#about-me div p{
+    line-height: 3rem;
+}
+#about-me div span{
+    color: var(--salmon);
+    display: inline;
+}
+#about-me img{
+    width: 100%;
+    padding: 4rem;
+    border-radius: 50%;
+ }

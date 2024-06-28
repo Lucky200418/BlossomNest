@@ -1,0 +1,119 @@
+#productCard{
+    padding: 1rem 2rem;
+    margin-top: 4rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    width: 40%;
+    height: auto;
+    background-color: var( --cultured);
+    position: fixed;
+    border-radius: 5px;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the modal exactly */
+    z-index: 6;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.productCardImg{
+    height: 100%;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#productCard img{
+    width: 100%;
+    height: 100%;
+}
+
+#productCard  div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+#productCard p{
+    margin-top: 3rem;
+}
+
+.productCardCloseBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    background-color: var( --cultured);
+    color: black;
+    padding: 0.7rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.productCardCloseBtnicon{
+    width: 2rem;
+    height: 2rem;
+}
+
+.moveImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.6rem;
+    background-color: #fff;
+    color: black;
+    padding: 0.9rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 40%;
+    font-size: 2rem;
+    opacity: 0.8;
+    /* Reduce opacity of my image navigation buttons */
+}
+.arrLeftProductCard{
+    width: 2rem;
+}
+.next{
+right: 0;
+}
+
+.productTitle{
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.btnAddCart{
+    margin-top: 3rem;
+    border: 1px solid var(--black);
+}
+.btnwhatsapp{
+    background-color: var(--salmon);
+    border-radius: 4%;
+    color: #fff;
+}
+
+.btnAddCart , .btnwhatsapp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.9rem;
+    gap: 1rem;
+}
+
+/* Cart Ui */
+.subBtn, .addBtn{
+    font-size: 1.7rem;
+}
+.trashCart{
+    color: var(--salmon);
+}

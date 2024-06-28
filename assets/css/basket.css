@@ -1,0 +1,167 @@
+.basketSection{
+    height: 70vh;
+    font-size: 1.5rem;
+}
+.basketSection {
+    position: relative; /* Make sure the section is positioned */
+}
+
+.basketSection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px; /* Adjust height as needed */
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient or solid color */
+    z-index: 1; /* Make sure it appears above the content */
+}
+
+.basketSectionTopEdge {
+    background: linear-gradient(to right, var(--bittersweet), var(--salmon));
+    height: 10px; /* Adjust height as needed */
+    width: 100%;
+}
+
+.basketSectionTopNav{
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    padding-top: 4rem;
+    padding-left: 3rem;
+    font-size: 2.3rem;
+}
+
+.basketSectionCloseIcon{
+    font-size: 3rem;
+    color: var(--salmon);
+}
+.mainContainerbasket{
+    display: grid;
+    grid-template-columns: 1fr 0.6fr;
+    gap: 3rem;
+    margin-top: 10rem;
+    
+}
+
+.basketListConatiners, .basketCheckoutContainer{
+    padding-left: 8rem;
+    width: 100%;
+    
+}
+
+.topHeadingBasket{
+    display: flex;
+    gap: 3rem;
+    align-items: center; 
+    margin-bottom: 9rem;
+}
+.topHeadingBasket h3{
+    font-size: 3.3rem;
+}
+
+.topHeadingBasket span{
+    font-size: 2.3rem;
+    color: var(--salmon);
+}
+.viewMoreBasketListsCont{
+    
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+.viewMoreBasketLists{
+    display: flex;
+    color: var(--bittersweet);
+}
+.basketList{
+    
+}
+.basketList li{
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+    width: 100%;
+    border-bottom: 1px solid #cacaca;
+    margin-top: 1.6rem;
+    padding-bottom: 2.8rem;
+}
+
+.basketItemImage{
+    width: 10%;
+}
+
+.basketItemDetails{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.9rem;
+    width:  100%;
+    /* position: fixed; */
+}
+.basketItemDetailsClose{
+    font-size: 2.9rem;
+    color: var(--salmon) !important;
+}
+.basketItemDetailsRight{
+    display: flex;
+    align-items: center;
+    gap: 2.6rem;
+}
+
+.basketCheckoutContainer{
+    width: 100%;
+    padding-right: 5rem;
+}
+.basketCheckoutDetails{
+    padding: 1.8rem;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    box-shadow: 0px 4px 20px 10px rgba(243, 240, 240, 0.5);
+}
+.basketCheckoutDetailsDiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 6rem;
+    border-bottom: 1px solid #cacaca;
+    padding-bottom: 0.6rem;
+}
+.basketCheckoutMsgBtnCont{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5rem;
+}
+
+.basketCheckoutMsgBtnCont div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+.basketCheckoutMsgBtn{
+    background-color: var(--bittersweet);
+    color: #fff;
+    padding: 1.3rem;
+    border-radius: 7px;
+    width: 35%;
+}
+.basketCheckoutMsgPrice{
+    font-weight: 700;
+}
+
+
+/* basketPopUp */
+.dropdownContainerBasketListItem{
+    display: flex;
+    justify-content: space-evenly !important;
+    gap: 3rem;
+    border-bottom: 1px solid #cacaca;
+    cursor: pointer;
+}
+
+.dropdownContainerBasketListItem p{
+    justify-self: end;
+}
