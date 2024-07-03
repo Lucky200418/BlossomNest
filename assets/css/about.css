@@ -1,4 +1,4 @@
-#about-me{
+.about-me{
     padding: var(--section-padding);
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -24,3 +24,18 @@
     padding: 4rem;
     border-radius: 50%;
  }
+
+ @media (max-width: 990px){
+    .about-me{
+        grid-template-columns: 1fr !important;
+      }
+
+      #about-me div p{
+       font-size: 3rem;
+       line-height: 5rem;
+    }
+
+    #about-me h1{
+        font-size: 4.5rem;
+    }
+}

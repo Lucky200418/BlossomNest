@@ -42,10 +42,12 @@ const basketCheckoutMsgBtn = document.querySelector(".basketCheckoutMsgBtn")
 const basketListContainer = document.querySelector(".basketList")
 const footerContainer = document.querySelector(".footer")
 const productSectionContainer = document.querySelector(".product")
+const btnShowMore = document.querySelector(".btnShowMore")
 
 
 
 export {
+    btnShowMore,
     basketCheckoutMsgBtn,
     productSectionContainer,
     footerContainer,

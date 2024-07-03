@@ -36,6 +36,7 @@ import {
     overlay,
     dropdownContainerBasket,
     basketSection,
+    btnShowMore,
 } from "../../assets/js/dom.js"
 
 
@@ -62,14 +63,14 @@ const init = function(){
     DisplayProductList(productDataJson)
 
   
-    if(window.location.href.slice(-1) === "/"){
-        DisplayTrendProductList(productTrendDataJson)
-    }else if(window.location.pathname.split("/")[2] === "index.html"){
-        DisplayTrendProductList(productTrendDataJson)
-    }else if(window.location.href.slice(-1) === "#"){
-        DisplayTrendProductList(productTrendDataJson)
-    }
-
+    // if(window.location.href.slice(-1) === "/"){
+    //     DisplayTrendProductList(productTrendDataJson)
+    // }else if(window.location.pathname.split("/")[2] === "index.html"){
+    //     DisplayTrendProductList(productTrendDataJson)
+    // }else if(window.location.href.slice(-1) === "#"){
+    //     DisplayTrendProductList(productTrendDataJson)
+    // }
+    DisplayTrendProductList(productTrendDataJson)
 }
 init()
 
@@ -91,6 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
     exploreBtnLists?.map(el=> el.addEventListener("click",exploreProductFunc.bind(this)));
     contact.addEventListener("click", scrollFooter.bind(this))
     btnwhatsapp.addEventListener('click', HandleWhatsappMessage.bind(this))
+    btnShowMore.addEventListener("click", showCartListDetails.bind(this))
     updateCartBagdeNum()
 });
 
@@ -168,7 +170,7 @@ function DisplayTrendProductList(DisplayArr){
             }).join(" ");
     
     trendProductListContainer.innerHTML = newProductList
-            
+         
 
     let trendproductItem = [...trendProductListContainer.querySelectorAll(".product-item")]
 
@@ -286,6 +288,7 @@ const updateProductCard = function(data){
     productCard.querySelector(".productDescrip").innerText = data.description
     productCard.querySelector('.btnAddCart').classList.add(`${data.id}`)
     btnwhatsapp.setAttribute("data-info",data.id)
+    btnShowMore.setAttribute("data-id", data.id)
 }
 
 
@@ -439,6 +442,7 @@ const showCartListDetails = function(e){
     productDetailsSection.classList.remove("hidden")
     dropdownContainer.classList.toggle("hidden")
     basketSection.classList.add("hidden")
+    productCard.classList.add("hidden")
 }
 
 // Update badge cart

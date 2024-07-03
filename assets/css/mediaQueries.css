@@ -74,6 +74,9 @@
         line-height: 8rem;
         font-size: 0.5rem;
       }
+      .about-me{
+        grid-template-columns: 1fr !important;
+      }
 }
 
 
@@ -132,7 +135,8 @@
         gap: 0.6rem;
     }
 
-
+   
+    
     
 }
 

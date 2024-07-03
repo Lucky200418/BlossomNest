@@ -93,6 +93,11 @@ right: 0;
 }
 
 .btnAddCart{
+    margin-top: 0.2rem;
+    border: 1px solid var(--black);
+}
+
+.btnShowMore{
     margin-top: 3rem;
     border: 1px solid var(--black);
 }
@@ -102,7 +107,7 @@ right: 0;
     color: #fff;
 }
 
-.btnAddCart , .btnwhatsapp{
+.btnAddCart  , .btnShowMore, .btnwhatsapp{
     display: flex;
     justify-content: center;
     align-items: center;
